@@ -1,11 +1,10 @@
 <nav>
-    <a [routerLink]='["/"]' routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Usuarios</a>
-    <button (click)="showLogoutModal()">Logout</button>
+    <a [routerLink]='["/"]' routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"></a>
 
     <header>
         <div id="titulo-header">
             <button><img src="/treslineas.png" id="treslineas" alt=""></button>
-            <a href="" [routerLink]='["contacts/list"]'>Contactos</a>
+            <a href="" [routerLink]='["/"]'>Contactos</a>
         </div>
 
         <div id="buscador">
@@ -13,8 +12,8 @@
         </div>
 
         <div id="settings">
-            <button><img src="tuerca.png" id="tuerca" alt=""></button>
-            <button><img src="persona.png" id="persona" alt=""></button>
+            <button id="close" (click)="showLogoutModal()">Logout</button>
+            <button id="person"><img src="persona.png" id="persona" alt=""></button>
         </div>
 
     </header>
@@ -27,8 +26,8 @@
 
             <div> 
                 <ul>
-                    <li id="contact" [routerLink]='["contacts/list"]'><button class="option">Contactos</button></li>
-                    <li id="frequent" [routerLink]='["contact/favorites"]'><button class="option">Frecuentes</button></li>
+                    <li id="contact" [routerLink]='["/"]'><button class="option">Contactos</button></li>
+                    <li id="frequent" [routerLink]='["contact/favorites"]'><button class="option">Favoritos</button></li>
                     <li id="others"><button class="option">Otros contactos</button></li>
                     <li><p>Corregir y administrar</p></li>
                     <li id="correct"><button class="option">Combinar y corregir</button></li>

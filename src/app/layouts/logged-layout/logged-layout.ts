@@ -1,7 +1,8 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, input } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { auth } from '../../services/auth';
 import Swal from 'sweetalert2';
+import { User } from '../../interfaces/user';
 
 @Component({
   selector: 'app-logged-layout',

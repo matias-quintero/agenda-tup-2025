@@ -8,5 +8,21 @@
         <p>Correo</p>
         <p>Telefono</p>
     </div>
+
 </div>
+
+<div>
+    @for (contacto of contactsService.contactos; track $index) {
+        @if (contacto.isFavorite) {
+            <a [routerLink]="['/contacts', contacto.id]">
+                <app-contact-list-item
+                [contacto]="contacto"
+                [index]="$index"/>
+            </a>
+        }
+    }@empty {
+        <p>No hay contactos favoritos</p>
+    }
+</div>
+
 </div>

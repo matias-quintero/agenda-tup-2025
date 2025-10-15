@@ -31,10 +31,6 @@ export const routes: Routes = [
                 component: ContactListPage
             },
             {
-                path:"contacts/list",
-                component: ContactListPage
-            },
-            {
                 path:"contacts/:idContacto",
                 component: ContactDetailsPage
             }, 

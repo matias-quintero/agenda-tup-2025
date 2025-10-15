@@ -43,20 +43,22 @@ header{
 }
 
 #buscador input{
+	width: 700px;
 	border-radius: 10px;
-	padding: 15px 300px;
+	padding: 15px;
 }
 
 #settings{
+	display: flex;
 	margin-left: 300px;
 }
 
-#settings button{
+#person{
 	background-color: transparent;
 	border-color: transparent;
 	margin-left: 5px;
 }
-#settings button:hover{
+#person:hover{
 	background-color: #4B0082;
 	border-radius: 100px;
 }
@@ -206,4 +208,19 @@ main{
 	background-color: transparent;
 	border-radius: 100px;
 	margin-right: 13px;
+}
+
+#close{
+	background-color: white;
+	color: black;
+	border-color: transparent;
+	padding: 10px 20px;
+	border-radius: 10px;
+	margin-left: 5px;
+}
+#close:hover{
+	background-color: red;
+	box-shadow: 1px 1px 20px black;
+	color: white;
+	cursor: pointer;
 }
