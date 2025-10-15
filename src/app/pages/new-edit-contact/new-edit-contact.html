@@ -1,0 +1,50 @@
+<div id="container" class="card">
+ @if(idContacto()){
+   <h2>Editar contacto</h2>
+} @else { 
+  <h2>Crear Contacto</h2>
+  }
+ <form id="square1" (ngSubmit)="handleFormSubmission(newContactForm)" #newContactForm="ngForm">
+  <div id="square2">
+  <div class="date">
+    <label for="first-Name">Nombre*</label>
+    <input id="first-Name" name="firstName" type="text" ngModel required="true" minlength="2" maxlength="20" #firstName="ngModel">
+    @if (firstName.dirty && firstName.invalid) {
+      <p class="error">El nombre es obligatorio y no puede ser una sola letra</p>
+    }
+  </div>
+  <div class="date">
+    <label for="last-Name">Apellido</label>
+    <input id="last-Name" name="lastName" type="text" ngModel maxlength="20">
+  </div>
+  <div class="date">
+    <label for="number">Telefono*</label>
+    <input id="number" name="number" type="text" ngModel required="true" minlength="3" maxlength="30">
+  </div>
+  <div class="date">
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" ngModel maxlength="40">
+  </div>
+  <div class="date">
+    <label for="address">Direccion</label>
+    <input id="address" name="address" type="text" ngModel minlength="5">
+  </div>
+  <div class="date">
+    <label for="company">Companía</label>
+    <input id="company" name="company" type="text" ngModel minlength="2">
+  </div>
+  <div class="date">
+    <label for="image">URL Imagen</label>
+    <input id="image" name="image" type="text" ngModel minlength="10">
+  </div>
+  @if (errorEnBack) {
+    <p class="error">Error indeterminado, intente nuevamente.</p>
+  } 
+  @if(idContacto()){
+    <button [disabled]="newContactForm.invalid">Editar</button>
+  } @else { 
+    <button id="add" [disabled]="newContactForm.invalid">Agregar</button>
+  }
+  </div>
+ </form>
+ </div>

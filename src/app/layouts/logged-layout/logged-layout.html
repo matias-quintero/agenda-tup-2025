@@ -1,0 +1,44 @@
+<nav>
+    <a [routerLink]='["/"]' routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Usuarios</a>
+    <button (click)="showLogoutModal()">Logout</button>
+
+    <header>
+        <div id="titulo-header">
+            <button><img src="/treslineas.png" id="treslineas" alt=""></button>
+            <a href="" [routerLink]='["contacts/list"]'>Contactos</a>
+        </div>
+
+        <div id="buscador">
+            <input type="email" placeholder="Buscar">
+        </div>
+
+        <div id="settings">
+            <button><img src="tuerca.png" id="tuerca" alt=""></button>
+            <button><img src="persona.png" id="persona" alt=""></button>
+        </div>
+
+    </header>
+
+    <main>
+         <div id="menu">
+            <div>
+                <button routerLink="contact/new" id="create-contact">Crear contacto</button>
+            </div>
+
+            <div> 
+                <ul>
+                    <li id="contact" [routerLink]='["contacts/list"]'><button class="option">Contactos</button></li>
+                    <li id="frequent" [routerLink]='["contact/favorites"]'><button class="option">Frecuentes</button></li>
+                    <li id="others"><button class="option">Otros contactos</button></li>
+                    <li><p>Corregir y administrar</p></li>
+                    <li id="correct"><button class="option">Combinar y corregir</button></li>
+                    <li id="import"><button class="option">Importar</button></li>
+                    <li id="bin"><button class="option">Papelera</button></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- EL RESULTADO DEL ROUTER -->
+        <router-outlet/>
+    </main>
+</nav>

@@ -1,0 +1,40 @@
+#square{
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    height: 40px;
+    margin-left: 15px;
+    margin-top: 20px;
+}
+#square:hover{
+    background-color: #D8BFD8;
+    border-radius: 20px;
+}
+
+p{
+    color: black;
+    font-size: 18px;
+    
+}
+
+#name{
+    width: 310px;
+    margin-left: 15px;
+}
+
+#email{
+    width: 310px;
+}
+
+#phone{
+    width: 360px;
+}
+
+button{
+    background-color: #662d91;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    border-color: transparent;
+    margin-left: 10px;
+}

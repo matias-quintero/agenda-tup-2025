@@ -1,0 +1,21 @@
+<div id="square">
+   <div id="name">
+      <p>{{contacto().firstName}} {{contacto().lastName}}</p>
+   </div>
+
+   <div id="email">
+      <p>{{contacto().email}}</p>
+   </div>
+
+   <div id="phone">
+      <p>{{contacto().number}}</p>
+   </div>
+
+   <p>
+      @if(contacto().isFavorite){
+          ⭐
+        }
+        <button [routerLink]="['/contact',contacto().id,'edit']">Editar</button>
+        <button (click)="showDeleteModal()">borrar</button>
+   </p>
+</div>

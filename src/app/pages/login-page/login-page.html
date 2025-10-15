@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+     <section>
+          <div id="square">
+              <div id="titule">
+                  <h1>Ingresa a tu cuenta</h1>
+                  <p>Inicie sesion para continuar</p>
+              </div>
+
+              <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+                 <div id="date">
+                     <label for="email">Correo electronico</label>
+                     <input id="email" name="email" type="email" ngModel #email="ngModel" required="true" autocomplete="email">
+                     @if (email.invalid && email.pristine) {
+                      <p class="error">Debe colocar el correo electronico</p>
+                     }
+
+                     <label for="password">Contraseña</label>
+                     <input id="password" name="password" type="password"  ngModel #password="ngModel" required="true" minlength="4" autocomplete="current-password">
+                     @if (password.invalid && password.pristine) {
+                      <p>debe colocar una contraseña</p>
+                     }
+                     <button [disabled]="loginForm.invalid">Iniciar sesión</button>
+                     @if (errorLogin) {
+                       <p class="error">Datos incorrectos, intentelo de nuevo</p>
+                     }
+                     <p>¿No tenés cuenta? <a routerLink="/register">Registrate</a></p>
+
+                     <a href="" routerLink="/">home</a>
+                 </div>
+             </form>
+         </div>
+     </section>
+ </main>    
+</body>
+</html>
+
+
+

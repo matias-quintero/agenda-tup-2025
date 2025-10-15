@@ -1,0 +1,58 @@
+
+<body>
+     <main>
+     <section>
+          <div id="square">
+              <div id="titule">
+                  <h1>Crea una cuenta</h1>
+                  <p>crea una cuenta para continuar</p>
+              </div>
+
+              <form #registerForm="ngForm" (ngSubmit)="register(registerForm.value)">
+                 <div id="date">
+                    <label for="firstName">Nombre</label>
+                    <input id="firstName" name="firstName" ngModel #firstName="ngModel" required="true" autocomplete="firstName">
+                    @if (firstName.invalid && firstName.pristine) {
+                        <p>debe poner un Nombre</p>
+                    }
+
+                    <label for="lastName">Apellido</label>
+                    <input id="lastName" name="lastName" ngModel #lastName="ngModel" required="true" autocomplete="lastName">
+                    @if (lastName.invalid && lastName.pristine) {
+                        <p>debe poner un Apellido</p>
+                    }
+
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" ngModel #email="ngModel" required="true" autocomplete="email">
+                    @if (email.invalid && email.pristine) {
+                        <p>debe poner un email</p>
+                    }
+
+                    <label for="password">Contraseña</label>
+                    <input id="password" name="password" type="password" ngModel #password="ngModel" minlength="4" autocomplete="new-password" required>
+                    @if (password.invalid && password.pristine) {
+                        <p>debe poner una contraseña</p>
+                    }
+
+                    <label for="password2">Repetir contraseña</label>
+                    <input id="password2" name="password2" type="password" ngModel #password2="ngModel" minlength="4" autocomplete="new-password" required>
+                    @if (password2.invalid && password2.pristine) {
+                        <p>Ingresa de nuevo la contraseña</p>
+                    }
+
+                    <button>Registrate</button>
+                    @if (isLoading) {
+                        <p>Cargando...</p>
+                    }
+                    @if (errorRegister) {
+                        <p>Error indeterminado, intentalo de nuevo</p>
+                    }
+
+                    <p>Ya tienes cuenta <a href="login" routerLink="">Inicia sesion</a></p>
+                 </div>
+                 
+              </form>
+         </div>
+     </section>
+ </main>
+</body>

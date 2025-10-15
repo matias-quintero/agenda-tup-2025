@@ -1,0 +1,66 @@
+#fondo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 78vw;
+}
+
+#square{
+    display: flex;
+    flex-direction: column;
+    background-color: #52008c;
+    color: white;
+    border-radius: 20px;
+    height: 500px;
+    width: 500px;
+}
+
+#option{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 60px;
+}
+#option button{
+    margin-right: 15px;
+    padding: 8px 10px;
+    border-radius: 20px;
+    border-color: transparent;
+}
+#star{
+    margin-right: 15px;
+}
+
+#name{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 80px;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+}
+#name h1{
+    font-size: 40px;
+    font-weight: 700;
+    margin-left: 20px;
+}
+
+#dates{
+    background-color: #662d91;
+    border-radius: 20px;
+    height: 200px;
+    width: 300px;
+    margin-left: 100px;
+    margin-top: 70px;
+}
+#dates h3{
+    text-align: center;
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+#dates p{
+    margin-left: 25px;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,51 @@
+#container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 173vh;
+}
+
+h2{
+    background-color: #52008c;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: white;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+#square1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #52008c;
+    color: white;
+    border-radius: 20px;
+    height: 350px;
+    width: 350px;
+}
+
+#square2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.date{
+    margin-bottom: 10px;
+}
+
+input{
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-left: 20px;
+}
+
+#add{
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-right: 60px;
+}
