@@ -21,6 +21,7 @@ export class LoggedLayout {
       showConfirmButton: true,
       confirmButtonColor: "var(--color-error)",
       cancelButtonText: "Cancelar",
+      cancelButtonColor: "var(--color-violeta)",
       confirmButtonText: `Cerrar sesión`
     }).then((result) => {
       /* Read more about isConfirmed, isDenied below */
